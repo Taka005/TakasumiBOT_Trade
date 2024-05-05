@@ -65,10 +65,10 @@ async function main(){
         left: {
           position: "left",
           type: "linear",
-          max: Math.max(...price)+100,
-          min: Math.min(...price)-100,
+          max: Math.max(...price)+50,
+          min: Math.min(...price)-50,
           ticks: {
-            stepSize: 1,
+            stepSize: 10,
             callback:(value)=>{
               return `${value}コイン`;
             }
@@ -77,10 +77,10 @@ async function main(){
         right:{
           position: "right",
           type: "linear",
-          max: Math.max(...(Math.max(...buy) > Math.max(...sell) ? buy : sell))+50,
-          min: Math.min(...(Math.min(...buy) < Math.min(...sell) ? buy : sell))-50,
+          max: Math.max(...(Math.max(...buy) > Math.max(...sell) ? buy : sell))+10,
+          min: Math.min(...(Math.min(...buy) < Math.min(...sell) ? buy : sell))-10,
           ticks: {
-            stepSize: 10,
+            stepSize: 1,
             callback: (value)=>{
               return `${Math.abs(value)}回`;
             }
