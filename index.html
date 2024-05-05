@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+      <title>株価グラフ - TakasumiBOT</title>
+
+      <head prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/ fb# prefix属性: https://ogp.me/ns/ prefix属性#">
+      <meta property="og:url" content="https://status.takasumibot.com/index.html" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="株価グラフ - TakasumiBOT" />
+      <meta property="og:description" content="TakasumiBOTの株価グラフ" />
+      <meta property="og:site_name" content="TakasumiBOT" />
+      <meta property="og:image" content="https://status.takasumibot.com/images/takasumibot.png" />
+
+      <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="./images/apple-touch-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="180x180" href="./images/apple-touch-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="./images/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="1024x1024" href="./images/takasumibot.png">
+
+      <link rel="stylesheet" href="./style.css">
+    </head>
+    <body class="bg-light">
+      <main>
+        <div class="container w-75">
+          <h1 class="text-center my-4">株価グラフ</h1>
+          <p class="text-center">
+            株価、売買数が表示されます
+            <br>
+            15分ごとに情報が更新されます
+          </p>
+        </div>
+        <canvas id="stock" width="50" height="50"></canvas>
+      </main>
+      <footer class="footer">
+        <div class="container text-center">
+          <p class="text-muted">©︎2024 Taka005</p>
+        </div>
+      </footer>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
+      <script src="./script.js"></script>
+    </body>
+</html>
