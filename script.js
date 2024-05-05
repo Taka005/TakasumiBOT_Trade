@@ -5,7 +5,7 @@ async function main(){
 
   console.log(res);
 
-  const time = res.data.map(data=>formatDate(new Date(data.time),"dd日HH時mm分"));
+  const time = res.data.map(data=>formatDate(new Date(data.time),"MM月dd日HH時mm分"));
   const price = res.data.map(data=>data.price);
   const buy = res.data.map(data=>Number(data.buy));
   const sell = res.data.map(data=>-Number(data.sell));
@@ -18,8 +18,8 @@ async function main(){
           type: "line",
           label: "株価",
           data: price,
-          backgroundColor: "rgba(255,255,0)",
-          borderColor: "rgba(255,255,0)",
+          backgroundColor: "rgba(0,0,0)",
+          borderColor: "rgba(0,0,0)",
           borderWidth: 1,
           radius: 0,
           yAxisID: "left"
@@ -68,7 +68,7 @@ async function main(){
           max: Math.max(...price)+100,
           min: Math.min(...price)-100,
           ticks: {
-            stepSize: 10,
+            stepSize: 1,
             callback:(value)=>{
               return `${value}コイン`;
             }
@@ -82,7 +82,7 @@ async function main(){
           ticks: {
             stepSize: 10,
             callback: (value)=>{
-              return `${value}回`;
+              return `${Math.abs(value)}回`;
             }
           },
           grid: {
