@@ -82,7 +82,7 @@ async function main(){
           ticks: {
             stepSize: 1,
             callback: (value)=>{
-              return `${Math.abs(Number(value))}回`;
+              return `${Math.abs(value)}回`;
             }
           },
           grid: {
